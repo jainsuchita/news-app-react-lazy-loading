@@ -1,2 +1,7 @@
-# React-Redux-webpack-babel
-A Basic started setup for React, Redux, Webpack and Babel
+## Installation Steps
+
+* `git clone git@github.com:rwieruch/minimal-react-webpack-babel-setup.git`
+* cd minimal-react-webpack-babel-setup
+* npm install
+* npm start
+* visit `http://localhost:8080/`
