@@ -1,13 +1,15 @@
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 const sourceDir = path.join(__dirname, "./src");
 
 module.exports = (env, argv) => ({
-    entry: {
-        "script": path.join(sourceDir, "index.js"),
-    },
+    entry: [
+        'webpack-dev-server/client?http://localhost:8080', // WebpackDevServer host and port
+        'webpack/hot/only-dev-server',
+        './src/index.js',
+    ],
+
     output: {
         path: path.resolve(__dirname, 'dist'),
         // publicPath allows you to specify the base path for all the assets within your application.
@@ -34,12 +36,15 @@ module.exports = (env, argv) => ({
                         loader: "html-loader"
                     }
                 ]
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
             }
         ]
     },
 
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
         new HtmlWebPackPlugin({
             template: path.join(sourceDir, "index.html"),
             filename: "index.html",
@@ -53,7 +58,8 @@ module.exports = (env, argv) => ({
             favicon: path.resolve(__dirname, "public/favicon.ico")
         }),
     ],
-    devServer: {
-        contentBase: './dist'
-    }
+    // devServer: {
+    //     contentBase: [path.join(__dirname, "src")],
+    //     hot: true,
+    // }
 });
