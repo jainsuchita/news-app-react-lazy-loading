@@ -5,9 +5,14 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --open --mode development --hot",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
-  "dependencies": {},
+  "homepage": "https://jainsuchita.github.io/currency-converter-react-app",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
