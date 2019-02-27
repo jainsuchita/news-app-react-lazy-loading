@@ -13,40 +13,44 @@ body {
   align-content: center;
 }
 
-.row-element{
-  border: 1px solid;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 20px;
-  margin: 20px;
-  overflow: auto;
+.Converter {
+    width: 100%;
+    padding: 0 15%;
+    box-sizing: border-box; 
+    text-align: center;
 }
 
-.row-element h2{
-  font-size: 16px;
+.Form {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-.row-element ul{
-  width: 100%;
+.Form input, select {
+    padding: 5px;
+    margin: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(119, 119, 119, 0.5);
 }
 
-.form-element{
-  display: flex;
-  flex-direction: column;
+.Form button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: rgb(11, 170, 59);
+    color: white;
+    border: none;
 }
 
-.form-group input{
-  width: 70%;
-  margin-left: 8px;
+.Converter h3 {
+    background-color: #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 30px;
 }
 
-.btn{
-  width: 100px;
-  margin: 20px auto;
-  border: none;
-  height: 48px;
-  color: white;
-  background: green;
+.Converter h2 span {
+    color: rgb(11, 170, 59);
 }
