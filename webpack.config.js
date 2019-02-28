@@ -12,7 +12,7 @@ module.exports = (env, argv) => ({
     output: {
         path: path.resolve(__dirname, 'build'),
         // publicPath allows you to specify the base path for all the assets within your application.
-        publicPath: '/Currency-converter-React',
+        publicPath: '/',
         filename: '[name].bundle.js',
     },
     optimization: {
