@@ -9,7 +9,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://jainsuchita.github.io/currency-converter-react-app",
+  "homepage": "https://jainsuchita.github.io/Currency-converter-React",
   "dependencies": {
     "gh-pages": "^2.0.1"
   },

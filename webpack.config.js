@@ -10,7 +10,7 @@ module.exports = (env, argv) => ({
         './src/index.js',
     ],
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'build'),
         // publicPath allows you to specify the base path for all the assets within your application.
         publicPath: '/',
         filename: '[name].bundle.js',
