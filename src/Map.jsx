@@ -102,6 +102,7 @@ class Map extends React.Component {
 
     render() {
 
+        // Filter out the hightlighted Marker
         let filteredMarkers = this.state.markers.filter((marker) => {
             return !this.state.result.includes(marker)
         })
@@ -130,10 +131,14 @@ class Map extends React.Component {
 
         return (
             <div style={{ textAlign: 'center' }}>
+
+                {/* // Search Form  */}
                 <Form
                     handleSearch={this.handleSearch}
                     handleChange={this.handleChange}
                     result={this.state.result} />
+
+                {/* Map with react-leaflet */}
                 <LeafletMap
                     ref={this.mapRef}
                     onLocationfound={this.handleLocationFound}
@@ -149,6 +154,7 @@ class Map extends React.Component {
                     easeLinearity={0.35}>
                     <TileLayer url='http://{s}.tile.osm.org/{z}/{x}/{y}.png' />
 
+                    {/* A marker showing your current location if you give access */}
                     <CircleMarker center={this.state.center} fillColor="blue" radius={100}>
                         <Marker icon={faceIcon} position={this.state.center} >
                             <Popup>
@@ -156,8 +162,13 @@ class Map extends React.Component {
                              </Popup>
                         </Marker>
                     </CircleMarker>
+
+                    {/* searched users will be highlighted with a new marker */}
                     {this.highlightUser()}
+
+                    {/* Remaining markers */}
                     {LeafletMarkers}
+
                 </LeafletMap>
             </div>
         );
