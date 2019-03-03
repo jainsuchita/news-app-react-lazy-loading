@@ -1,0 +1,41 @@
+html,
+body {
+  /* height: 100%; */
+  /* width: 100vw; */
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.leaflet-container {
+  height: 100vh;
+}
+
+
+.form__container{
+  position: absolute;
+  top: 20px;
+  left: 75px;
+  z-index: 990;
+  display: flex;
+  align-items: center;
+}
+
+.form__container button{
+  margin-left: 20px;
+}
+
+.form-group{
+  margin-bottom: 0px;
+}
+
+.search-result{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.search-result .badge{
+  margin-bottom: 15px;
+}

@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App.jsx';
-import './styles/index.css';
+import Map from './Map.jsx';
+import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
 
 ReactDOM.render(
-  <App />,
+  <Map />,
   document.getElementById('root')
 );
 
