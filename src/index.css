@@ -1,41 +1,44 @@
-html,
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 body {
-  /* height: 100%; */
-  /* width: 100vw; */
-  padding: 0;
   margin: 0;
+  padding: 0;
   font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4;
 }
 
-.leaflet-container {
-  height: 100vh;
+a {
+  border-bottom: 2px solid #ffc600;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 2px solid #FF8F00;
 }
 
 
-.form__container{
-  position: absolute;
-  top: 20px;
-  left: 75px;
-  z-index: 990;
-  display: flex;
-  align-items: center;
+/* Scrollbar */
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
 }
 
-.form__container button{
-  margin-left: 20px;
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
 }
 
-.form-group{
-  margin-bottom: 0px;
-}
-
-.search-result{
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-  align-items: center;
-}
-
-.search-result .badge{
-  margin-bottom: 15px;
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #555;
 }

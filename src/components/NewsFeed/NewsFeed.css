@@ -1,0 +1,19 @@
+
+.title h1 {
+  font-size: 1.7em;
+  color: white;
+}
+
+a {
+  color: black;
+}
+
+.appHeader {
+  background-color: #222;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
